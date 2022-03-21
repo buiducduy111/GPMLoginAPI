@@ -1,0 +1,8 @@
+D:\out_source\2021_projects\GPMLoginAPI\GPMLoginAPI\csharp\GPMLoginAPI\bin\Debug\GPMLoginAPI.exe
+D:\out_source\2021_projects\GPMLoginAPI\GPMLoginAPI\csharp\GPMLoginAPI\bin\Debug\GPMLoginAPI.pdb
+D:\out_source\2021_projects\GPMLoginAPI\GPMLoginAPI\csharp\GPMLoginAPI\bin\Debug\WebDriver.dll
+D:\out_source\2021_projects\GPMLoginAPI\GPMLoginAPI\csharp\GPMLoginAPI\obj\Debug\GPMLoginAPI.csprojAssemblyReference.cache
+D:\out_source\2021_projects\GPMLoginAPI\GPMLoginAPI\csharp\GPMLoginAPI\obj\Debug\GPMLoginAPI.csproj.CoreCompileInputs.cache
+D:\out_source\2021_projects\GPMLoginAPI\GPMLoginAPI\csharp\GPMLoginAPI\obj\Debug\GPMLoginAPI.csproj.CopyComplete
+D:\out_source\2021_projects\GPMLoginAPI\GPMLoginAPI\csharp\GPMLoginAPI\obj\Debug\GPMLoginAPI.exe
+D:\out_source\2021_projects\GPMLoginAPI\GPMLoginAPI\csharp\GPMLoginAPI\obj\Debug\GPMLoginAPI.pdb

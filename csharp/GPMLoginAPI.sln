@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPMLoginAPI", "GPMLoginAPI\GPMLoginAPI.csproj", "{1197FE95-D8DB-4BB8-A486-455BB64A6BF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1197FE95-D8DB-4BB8-A486-455BB64A6BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1197FE95-D8DB-4BB8-A486-455BB64A6BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1197FE95-D8DB-4BB8-A486-455BB64A6BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1197FE95-D8DB-4BB8-A486-455BB64A6BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A945C77A-1BEF-4426-BE92-6C5986029283}
+	EndGlobalSection
+EndGlobal
