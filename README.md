@@ -8,4 +8,4 @@
 [https://facebook.com/buiducduy111](https://facebook.com/buiducduy111)
 
 ## Video giải thích
-{@vimeo: https://youtu.be/vy-9Q9VP_gk}
+{@youtube: https://www.youtube.com/watch?v=vy-9Q9VP_gk}
