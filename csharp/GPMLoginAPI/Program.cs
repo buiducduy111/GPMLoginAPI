@@ -28,25 +28,28 @@ namespace GPMSeleniumSample
             // Gọi commandline vào GPMLogin
             // Bạn có thể mở Profile có sẵn hoặc tạo Profile mới (cấu hình random) qua việc theo tác commandline với GPMLogin.exe
 
-            string gpmPath = @"D:\out_source\2021_projects\GPMLogin\GPMLogin\GPMLogin\bin\Debug"; // Đường dẫn tới thư mục tool GPMLogin
+            string gpmPath = @"C:\Users\frien\Desktop\Test public tools\GPMLogin_full_132"; // Đường dẫn tới thư mục tool GPMLogin
             int remotePort = findFreePort();
-            string profileId = "c0savast2qp1f2mhx6kd0ez8k52eihuq3nbzbazl1bc7rzblk9"; // Copy ID trên App GPMLogin
+            string profileId = "lhoioqxa96dvgmge3gc3ig0z47chzkc7cgnvdlgfk8dj7tyqsa"; // Copy ID trên App GPMLogin
 
             // Gọi profile có sẵn
+            /*
             ProcessStartInfo startInfo = new ProcessStartInfo()
             {
                 WorkingDirectory = gpmPath, // Bắt buộc set WorkingDirectory vào GpmPath để gọi commandline
                 FileName = gpmPath + "\\GPMLogin.exe",
                 Arguments = $"--mode=open --profile_id={profileId} --remote_port={remotePort}"
             };
+            */
 
             // hoặc tạo profile mới
-            startInfo = new ProcessStartInfo()
+            ProcessStartInfo startInfo = new ProcessStartInfo()
             {
                 WorkingDirectory = gpmPath, // Bắt buộc set WorkingDirectory vào GpmPath để gọi commandline
                 FileName = gpmPath + "\\GPMLogin.exe",
-                Arguments = $"--mode=new --profile_name=\"Duy dep zai khoai to\" --remote_port={remotePort}"
+                Arguments = $"--mode=new --profile_name=\"Test Simple API\" --remote_port={remotePort}"
             };
+            
 
             Process.Start(startInfo);
             Thread.Sleep(3000);
@@ -56,31 +59,25 @@ namespace GPMSeleniumSample
 
             ChromeOptions options = new ChromeOptions();
             options.DebuggerAddress = "127.0.0.1:" + remotePort;
-            options.AddArguments(new string[]
-            {
-                "--no-default-browser-check",
-                "--no-first-run"
-            });
 
             UndetectChromeDriver driver = new UndetectChromeDriver(service, options);
 
-            // Đối với tạo profile mới, sẽ có tab Welcome, cần switch tới tab thứ 2 để thực hiện auto (bỏ qua tab Welcome)
-            driver.SwitchTo().Window(driver.WindowHandles[driver.WindowHandles.Count - 1]);
-
-
             // LOGIN GMAIL
+            driver.Get("https://nowsecure.nl/");
+
+            return;
             driver.Get("https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
             Thread.Sleep(3000);
 
             var input = driver.FindElement(By.Name("identifier"));
-            input.SendKeys("test1");
+            input.SendKeys("buiducduyit111");
             Thread.Sleep(500);
             input.SendKeys(Keys.Enter);
 
             Thread.Sleep(3000);
 
             input = driver.FindElement(By.Name("password"));
-            input.SendKeys("test1");
+            input.SendKeys("abc");
             Thread.Sleep(500);
             input.SendKeys(Keys.Enter);
         }
