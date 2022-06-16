@@ -28,20 +28,19 @@ namespace GPMSeleniumSample
             // Gọi commandline vào GPMLogin
             // Bạn có thể mở Profile có sẵn hoặc tạo Profile mới (cấu hình random) qua việc theo tác commandline với GPMLogin.exe
 
-            string gpmPath = @"C:\Users\frien\Desktop\Test public tools\GPMLogin_full_132"; // Đường dẫn tới thư mục tool GPMLogin
+            string gpmPath = @"C:\Users\frien\Desktop\Test public tools\GPMLogin_full"; // Đường dẫn tới thư mục tool GPMLogin
             int remotePort = findFreePort();
-            string profileId = "lhoioqxa96dvgmge3gc3ig0z47chzkc7cgnvdlgfk8dj7tyqsa"; // Copy ID trên App GPMLogin
+            string profileId = "wm6n5ilgppah8ukqcrmvleyzw1lagq2uq2nlfggfnzwotvvr4y"; // Copy ID trên App GPMLogin
 
             // Gọi profile có sẵn
-            /*
             ProcessStartInfo startInfo = new ProcessStartInfo()
             {
                 WorkingDirectory = gpmPath, // Bắt buộc set WorkingDirectory vào GpmPath để gọi commandline
                 FileName = gpmPath + "\\GPMLogin.exe",
                 Arguments = $"--mode=open --profile_id={profileId} --remote_port={remotePort}"
             };
-            */
 
+            /*
             // hoặc tạo profile mới
             ProcessStartInfo startInfo = new ProcessStartInfo()
             {
@@ -49,6 +48,7 @@ namespace GPMSeleniumSample
                 FileName = gpmPath + "\\GPMLogin.exe",
                 Arguments = $"--mode=new --profile_name=\"Test Simple API\" --remote_port={remotePort}"
             };
+            */
             
 
             Process.Start(startInfo);
@@ -60,26 +60,10 @@ namespace GPMSeleniumSample
             ChromeOptions options = new ChromeOptions();
             options.DebuggerAddress = "127.0.0.1:" + remotePort;
 
-            UndetectChromeDriver driver = new UndetectChromeDriver(service, options);
+            ChromeDriver driver = new ChromeDriver(service, options);
 
-            // LOGIN GMAIL
-            driver.Get("https://nowsecure.nl/");
-
-            return;
-            driver.Get("https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
-            Thread.Sleep(3000);
-
-            var input = driver.FindElement(By.Name("identifier"));
-            input.SendKeys("buiducduyit111");
-            Thread.Sleep(500);
-            input.SendKeys(Keys.Enter);
-
-            Thread.Sleep(3000);
-
-            input = driver.FindElement(By.Name("password"));
-            input.SendKeys("abc");
-            Thread.Sleep(500);
-            input.SendKeys(Keys.Enter);
+            // Test
+            driver.Navigate().GoToUrl("https://giaiphapmmo.net");
         }
 
         // Tìm port hợp lệ
