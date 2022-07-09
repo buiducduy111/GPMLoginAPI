@@ -27,7 +27,7 @@ profileId = "isfboozwefoxiwg5srfdhtbohjgsd1tm8xw8mxvsg3jo4g0yz6"; # Copy ID trê
 args = [gpmPath + '\\GPMLogin.exe', '--mode=open', f'--profile_id={profileId}', f'--remote_port={remotePort}', '--turn-off-whats-new']
 
 # hoặc tạo profile mới
-args = [gpmPath + '\\GPMLogin.exe', '--mode=new', f'--profile_name=ngochoaitn-gpm-test', f'--remote_port={remotePort}', '--turn-off-whats-new']#, '--proxy-server=1.1.1.1:222']
+args = [gpmPath + '\\GPMLogin.exe', '--mode=new', f'--profile_name=ngochoaitn-gpm-test', f'--remote_port={remotePort}', '--addination_args="--disable-web-security --turn-off-whats-new --disable-site-isolation-trials --disable-application-cache"']#, '--proxy-server=1.1.1.1:222']
 
 subprocess.call(args, cwd=gpmPath) # phải có cwd nha các bác <3
 time.sleep(3)
